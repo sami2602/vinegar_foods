@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Modern Restaurant</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- Navbar -->
+    <header id="navbar">
+        <nav>
+            <div class="logo">
+                <a href="#"><img src="image/logo.png" height="120px" alt=""></a>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#menus">Menus</a></li>
+                <li><a href="#delicacies">Delicacies</a></li>
+                <li><a href="#about">About Us</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="#reservation">Reservation</a></li>
+            </ul>
+            <div class="hamburger" id="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1>Welcome to Vinegar Foods Restaurant </h1>
+            <p>Explore the taste of over 240,000 delicacies from across the country</p>
+            <a href="#reservation" class="btn">Book a Table</a>
+        </div>
+    </section>
+
+    <!-- Rotating Menus Section -->
+    <section id="menus" class="menus">
+        <div class="section-title">
+            <h2>Our Rotating Menus</h2>
+            <p>Explore 72 different menus, updated frequently!</p>
+        </div>
+        <div class="menu-carousel">
+            <!-- JavaScript will rotate menu items with images -->
+        </div>
+    </section>
+
+    <!-- Delicacies Section -->
+    <section id="delicacies" class="delicacies">
+        <div class="section-title">
+            <h2>Our Delicacies</h2>
+            <p>Explore 240,000 delicacies from around the country</p>
+        </div>
+        <div class="delicacy-filter">
+            <input type="text" id="search" placeholder="Search delicacies..." oninput="filterDelicacies()">
+        </div>
+        <div id="delicacy-list" class="delicacy-list">
+            <!-- Delicacies will be dynamically inserted here -->
+        </div>
+    </section>
+
+    <!-- Reservation Section -->
+    <section id="reservation" class="reservation">
+        <div class="section-title">
+            <h2>Book a Table</h2>
+        </div>
+        <form id="reservation-form">
+            <input type="date" required>
+            <input type="time" required>
+            <input type="number" placeholder="Number of People" required>
+            <button type="submit" class="btn">Reserve Now</button>
+        </form>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Restaurant | All Rights Reserved</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
