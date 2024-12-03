@@ -1,4 +1,4 @@
-// Navbar Hide/Show on Scroll and Mouse Enter
+
 const navbar = document.getElementById("navbar");
 const hamburger = document.getElementById("hamburger");
 const navLinks = document.querySelector(".nav-links");
@@ -25,12 +25,12 @@ navbar.addEventListener("mouseleave", function () {
     }
 });
 
-// Hamburger Menu Toggle
+
 hamburger.addEventListener("click", function () {
     navLinks.classList.toggle("active");
 });
 
-// Example of rotating menus (you can add your images and menu items)
+
 const menuItems = [
     {
         title: "Menu 1",
@@ -78,7 +78,7 @@ const menuItems = [
         img: "https://via.placeholder.com/300x200"
     },
 
-    // Add more items here
+
 ];
 
 const menuCarousel = document.querySelector(".menu-carousel");
@@ -96,12 +96,12 @@ menuItems.forEach(item => {
     menuCarousel.appendChild(menuItem);
 });
 
-// Example of delicacies filter
+
 const delicacyList = document.getElementById("delicacy-list");
 const delicacies = [
     { name: "Delicacy 1", description: "Delicious food from region 1", img: "https://via.placeholder.com/300x200" },
     { name: "Delicacy 2", description: "Delicious food from region 2", img: "https://via.placeholder.com/300x200" },
-    // Add more delicacies here
+    
 ];
 
 function loadDelicacies() {
@@ -135,5 +135,6 @@ function filterDelicacies() {
         delicacyList.appendChild(item);
     });
 }
+
 
 loadDelicacies();
