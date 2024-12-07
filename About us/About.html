@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Restaurant Section</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+        /* Global Styles */
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f9f9f9;
+            color: #333;
+        }
+
+        .welcome-section {
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            padding: 30px;
+            overflow: hidden;
+            margin-top: 20px;
+        }
+
+        .welcome-section img {
+            width: 100%;
+            border-radius: 10px;
+            object-fit: cover;
+        }
+
+        .welcome-text h1 {
+            font-size: 2.5rem;
+            color: #222;
+        }
+
+        .welcome-text p {
+            font-size: 1.1rem;
+            color: #555;
+        }
+
+        .btn-custom {
+            background-color: #ff9900;
+            color: #fff;
+            padding: 12px 25px;
+            font-size: 1rem;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: all 0.3s ease-in-out;
+            text-decoration: none;
+        }
+
+        .btn-custom:hover {
+            background-color: #ffcc33;
+            box-shadow: 0 6px 15px rgba(255, 153, 0, 0.5);
+        }
+
+        /* Cards Section */
+        .card {
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+            background-color: #fff;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        .card img {
+            width: 355px;  /* Set image width to 180px */
+            height: 200px; /* Set image height to 180px */
+            object-fit: cover; /* Ensure images fit well inside the box */
+            margin-bottom: 15px;
+            margin-top: -20px;
+            margin-left: -20px;
+        }
+
+        .card h3 {
+            font-size: 1.4rem;
+            color: #333;
+        }
+
+        .card p {
+            font-size: 1rem;
+            color: #555;
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .card {
+                margin-bottom: 20px;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .card img {
+                width: 100%;  /* Adjust image size for small screens */
+                height: auto;
+            }
+        }
+        body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      background-color: #f9f9f9;
+      color: #333;
+    }
+
+    .heading {
+      color: #7d0f16;
+      margin-bottom: 20px;
+    }
+
+    .btn-neon {
+      color: #fff;
+      background: linear-gradient(90deg, #ff7e5f, #feb47b);
+      border: none;
+      border-radius: 30px;
+      padding: 10px 20px;
+      font-size: 1rem;
+      box-shadow: 0 4px 15px rgba(255, 126, 95, 0.5);
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .btn-neon:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 6px 20px rgba(255, 126, 95, 0.7);
+    }
+
+    .images img {
+      border-radius: 5px;
+      object-fit: cover;
+      width: 100%;
+    }
+
+    .check-icon::before {
+      content: '✔';
+      color: #7d0f16;
+      margin-right: 10px;
+    }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+
+        <!-- Welcome Section -->
+        <div class="row welcome-section d-flex align-items-center">
+            <div class="col-md-6">
+                <img src="image/image.png" alt="Breakfast Image">
+            </div>
+            <div class="col-md-6">
+                <div class="welcome-text">
+                    <h1>Welcome To Our Restaurant</h1>
+                    <p>Enjoy delicious meals made with the freshest ingredients, served with care in a welcoming atmosphere. Experience quality food and exceptional service.</p>
+                    <a href="#" class="btn btn-custom">Read More</a>
+                </div>
+            </div>
+        </div>
+        <div class="container py-5">
+            <div class="row align-items-center">
+              <!-- Text Section -->
+              <div class="col-lg-6 mb-4 mb-lg-0">
+                <h1 class="heading">We Make Everything By Hand With The Best Possible Ingredients</h1>
+                <p>At our kitchen, we take pride in crafting every dish with care and passion. Using the finest and freshest ingredients, we ensure every bite is a moment of delight. From our desserts to our savory dishes, every item is made to perfection!</p>
+                <ul class="list-unstyled">
+                  <li class="mb-2 check-icon">Freshly sourced and organic ingredients</li>
+                  <li class="mb-2 check-icon">Handmade with love and attention</li>
+                  <li class="mb-2 check-icon">A commitment to quality and taste</li>
+                </ul>
+                <a href="#" class="btn btn-neon">Discover More</a>
+              </div>
+              <!-- Images Section -->
+              <div class="col-lg-6">
+                <div class="row g-3 images">
+                  <div class="col-6">
+                    <img src="https://via.placeholder.com/400x300" alt="Image 1">
+                  </div>
+                  <div class="col-6">
+                    <img src="https://via.placeholder.com/400x300" alt="Image 2">
+                  </div>
+                  <div class="col-6">
+                    <img src="https://via.placeholder.com/400x300" alt="Image 3">
+                  </div>
+                  <div class="col-6">
+                    <img src="https://via.placeholder.com/400x300" alt="Image 4">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        
+        <!-- Cards Section -->
+        <div class="row mt-5">
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="image (2).png" alt="Quality Food">
+                    <h3>Quality Food</h3>
+                    <p>Expertly prepared dishes made with premium ingredients.</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="image (4).png" alt="Food and Drinks">
+                    <h3>Food And Drinks</h3>
+                    <p>A diverse menu offering the perfect pairing of flavors.</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="image (5).png" alt="Expert Chef">
+                    <h3>Expert Chef</h3>
+                    <p>Meals crafted by culinary masters with passion and skill.</p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Bootstrap JS (Optional for functionality like buttons) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>
