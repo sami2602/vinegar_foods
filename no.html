@@ -9,23 +9,19 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
 
     <style>
-        /* Global Styles */
         body {
             font-family: 'Arial', sans-serif;
             background-color: #f9f9f9;
             color: #333;
-            font-size: 16px; /* Base font size for scalability */
-            line-height: 1.6;
         }
 
-        /* Welcome Section */
         .welcome-section {
             background-color: #fff;
             border-radius: 10px;
             box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
             padding: 30px;
-            margin-top: 20px;
             overflow: hidden;
+            margin-top: 20px;
         }
 
         .welcome-section img {
@@ -34,7 +30,6 @@
             object-fit: cover;
         }
 
-        /* Welcome Text */
         .welcome-text h1 {
             font-size: 2.5rem;
             color: #222;
@@ -45,7 +40,6 @@
             color: #555;
         }
 
-        /* Button Styles */
         .btn-custom {
             background-color: #ff9900;
             color: #fff;
@@ -62,40 +56,6 @@
             box-shadow: 0 6px 15px rgba(255, 153, 0, 0.5);
         }
 
-        /* Cards Section */
-        .card {
-            border-radius: 10px;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-            transition: transform 0.3s, box-shadow 0.3s;
-            background-color: #fff;
-            text-align: center;
-            padding: 20px;
-            margin: 10px;
-        }
-
-        .card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
-        }
-
-        .card img {
-            width: 100%; /* Adjust image to container size */
-            height: auto; /* Maintain aspect ratio */
-            border-radius: 10px;
-            margin-bottom: 15px;
-        }
-
-        .card h3 {
-            font-size: 1.4rem;
-            color: #333;
-        }
-
-        .card p {
-            font-size: 1rem;
-            color: #555;
-        }
-
-        /* Neon Button */
         .btn-neon {
             color: #fff;
             background: linear-gradient(90deg, #ff7e5f, #feb47b);
@@ -112,83 +72,86 @@
             box-shadow: 0 6px 20px rgba(255, 126, 95, 0.7);
         }
 
-        /* Images Section */
-        .images img {
-            border-radius: 5px;
+        .card {
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+            background-color: #fff;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        .card img {
+            width: 355px;
+            height: 200px;
             object-fit: cover;
-            width: 100%;
+            margin-bottom: 15px;
         }
 
-        /* List Style */
-        .check-icon::before {
-            content: '✔';
-            color: #7d0f16;
-            margin-right: 10px;
-        }
-
-        /* Responsive Adjustments */
         @media (max-width: 768px) {
             .card {
                 margin-bottom: 20px;
             }
         }
-
-        @media (max-width: 576px) {
-            .card img {
-                width: 100%;
-                height: auto;
-            }
-        }
-
     </style>
 </head>
 <body>
 
     <div class="container">
-
         <!-- Welcome Section -->
         <div class="row welcome-section d-flex align-items-center">
             <div class="col-md-6">
-                <img src="images/image (1).png" alt="Breakfast Image">
+                <img src="image/image.png" alt="Breakfast Image">
             </div>
             <div class="col-md-6">
                 <div class="welcome-text">
                     <h1>Welcome To Our Restaurant</h1>
                     <p>Enjoy delicious meals made with the freshest ingredients, served with care in a welcoming atmosphere. Experience quality food and exceptional service.</p>
-                    <a href="#" class="btn btn-custom">Read More</a>
+                    <a href="#about-section" class="btn btn-custom scroll-to-section">Read More</a>
                 </div>
             </div>
         </div>
 
-        <!-- Text and Images Section -->
-        <div class="container py-5">
+        <!-- About Section -->
+        <div id="about-section" class="container py-5">
             <div class="row align-items-center">
-                <!-- Text Section -->
                 <div class="col-lg-6 mb-4 mb-lg-0">
                     <h1 class="heading">We Make Everything By Hand With The Best Possible Ingredients</h1>
                     <p>At our kitchen, we take pride in crafting every dish with care and passion. Using the finest and freshest ingredients, we ensure every bite is a moment of delight. From our desserts to our savory dishes, every item is made to perfection!</p>
                     <ul class="list-unstyled">
-                        <li class="mb-2 check-icon">Freshly sourced and organic ingredients</li>
-                        <li class="mb-2 check-icon">Handmade with love and attention</li>
-                        <li class="mb-2 check-icon">A commitment to quality and taste</li>
+                        <li class="mb-2">✔ Freshly sourced and organic ingredients</li>
+                        <li class="mb-2">✔ Handmade with love and attention</li>
+                        <li class="mb-2">✔ A commitment to quality and taste</li>
                     </ul>
-                    <a href="#" class="btn btn-neon">Discover More</a>
+                    <a href="#" class="btn btn-neon" data-bs-toggle="modal" data-bs-target="#discoverModal">Discover More</a>
                 </div>
-                <!-- Images Section -->
                 <div class="col-lg-6">
-                    <div class="row g-3 images">
-                        <div class="col-6">
-                            <img src="images/tika (2).png" alt="Grilled Tikka Plate">
-                        </div>
-                        <div class="col-6">
-                            <img src="images/daniyal (2).png" alt="Freshly baked bread">
-                        </div>
-                        <div class="col-6">
-                            <img src="images/daniyal (3).png" alt="A vibrant fruit salad">
-                        </div>
-                        <div class="col-6">
-                            <img src="images/image (7).png" alt="A chef preparing food">
-                        </div>
+                    <div class="row g-3">
+                        <div class="col-6"><img src="https://via.placeholder.com/400x300" alt="Image 1"></div>
+                        <div class="col-6"><img src="https://via.placeholder.com/400x300" alt="Image 2"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Modal -->
+        <div class="modal fade" id="discoverModal" tabindex="-1" aria-labelledby="discoverModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="discoverModalLabel">Discover More</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        Discover more about our story, passion, and menu offerings!
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
                     </div>
                 </div>
             </div>
@@ -198,31 +161,41 @@
         <div class="row mt-5">
             <div class="col-md-4">
                 <div class="card">
-                    <img src="images/image (2).png" alt="Quality Food">
+                    <img src="image/image1.png" alt="Quality Food">
                     <h3>Quality Food</h3>
                     <p>Expertly prepared dishes made with premium ingredients.</p>
                 </div>
             </div>
             <div class="col-md-4">
                 <div class="card">
-                    <img src="images/image (4).png" alt="Food and Drinks">
+                    <img src="image/image2.png" alt="Food and Drinks">
                     <h3>Food And Drinks</h3>
                     <p>A diverse menu offering the perfect pairing of flavors.</p>
                 </div>
             </div>
             <div class="col-md-4">
                 <div class="card">
-                    <img src="images/image (5).png" alt="Expert Chef">
+                    <img src="image/image3.png" alt="Expert Chef">
                     <h3>Expert Chef</h3>
                     <p>Meals crafted by culinary masters with passion and skill.</p>
                 </div>
             </div>
         </div>
-
     </div>
 
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        document.querySelectorAll('.scroll-to-section').forEach(btn => {
+            btn.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({ behavior: 'smooth' });
+                }
+            });
+        });
+    </script>
 
 </body>
 </html>
