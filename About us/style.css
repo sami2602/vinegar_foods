@@ -1,0 +1,132 @@
+*    /* Global Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f9f9f9;
+    color: #333;
+    font-size: 16px; /* Base font size for scalability */
+    line-height: 1.6;
+}
+
+/* Welcome Section */
+.welcome-section {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    margin-top: 20px;
+    overflow: hidden;
+}
+
+.welcome-section img {
+    width: 100%;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+/* Welcome Text */
+.welcome-text h1 {
+    font-size: 2.5rem;
+    color: #222;
+}
+
+.welcome-text p {
+    font-size: 1.1rem;
+    color: #555;
+}
+
+/* Button Styles */
+.btn-custom {
+    
+    color: #fff;
+    background: linear-gradient(90deg, #fd7351, #ffa25a);
+    border: none;
+    border-radius: 30px;
+    padding: 10px 20px;
+    font-size: 1rem;
+    box-shadow: 0 4px 15px rgba(255, 126, 95, 0.5);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.btn-custom:hover {
+    
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(255, 126, 95, 0.7);
+}
+
+/* Cards Section */
+.card {
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+    background-color: #fff;
+    text-align: center;
+    padding: 20px;
+    margin: 10px;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+}
+
+.card img {
+    width: 100%; /* Adjust image to container size */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+.card h3 {
+    font-size: 1.4rem;
+    color: #333;
+}
+
+.card p {
+    font-size: 1rem;
+    color: #555;
+}
+
+/* Neon Button */
+.btn-neon {
+    color: #fff;
+    background: linear-gradient(90deg, #ff7e5f, #feb47b);
+    border: none;
+    border-radius: 30px;
+    padding: 10px 20px;
+    font-size: 1rem;
+    box-shadow: 0 4px 15px rgba(255, 126, 95, 0.5);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.btn-neon:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(255, 126, 95, 0.7);
+}
+
+/* Images Section */
+.images img {
+    border-radius: 5px;
+    object-fit: cover;
+    width: 100%;
+}
+
+/* List Style */
+.check-icon::before {
+    content: '✔';
+    color: #7d0f16;
+    margin-right: 10px;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .card {
+        margin-bottom: 20px;
+    }
+}
+
+@media (max-width: 576px) {
+    .card img {
+        width: 100%;
+        height: auto;
+    }
+}
