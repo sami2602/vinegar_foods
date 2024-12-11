@@ -10,22 +10,31 @@
 
 <!-- Navbar -->
 <header id="navbar">
-  <nav class="navbar">
-    <div class="logo">
-      <h1><img src="images/logo.png" height="120px" alt=""></h1>
+  <nav class="navbar navbar-expand-lg navbar-dark fixed-top ps-5">
+    <div class="container-fluid">
+      <a class="logo" href="#">
+        <img src="images/logo.png" height="100px" alt="Logo">
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse pe-5" id="navbarNav">
+        <ul class="navbar-nav mx-auto"> <!-- Use mx-auto for centering navbar items -->
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="#menu">Menu</a></li>
+          <li><a href="#order">Order Online</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
     </div>
-    <ul class="nav-links">
-      <li><a href="index.html">Home</a></li>
-      <li><a href="about.html">About Us</a></li>
-      <li><a href="#menu">Menu</a></li>
-      <li><a href="#order">Order Online</a></li>
-      <li><a href="contact.html">Contact</a></li>
-    </ul>
   </nav>
 </header>
 
+
+
 <!-- Contact Us Section -->
-34<section id="contact-us">
+<section id="contact-us">
   <h2>Get in Touch</h2>
   <form action="submit_form.php" method="post">
     <input type="text" name="name" placeholder="Your Name" required><br>
@@ -45,23 +54,39 @@
 
 <!-- Footer -->
 <footer>
-  <div class="footer-info">
-    <div>
-      <h4>Contact Us</h4>
-      <p>Address: XYZ, City</p>
-      <p>Phone: (123) 456-7890</p>
-    </div>
-    <div>
-      <h4>Social Media</h4>
-      <p><a href="#">Facebook</a> | <a href="#">Instagram</a></p>
-    </div>
-    <div>
-      <h4>Working Hours</h4>
-      <p>Mon-Sun: 9:00 AM - 9:00 PM</p>
+  <div class="footer-section">
+    <h4>About Us</h4>
+    <p>We are a restaurant that offers the best food in town. Our goal is to provide you with an exceptional dining experience! <a href="">Read More</a></p>
+  </div>
+  <div class="footer-section">
+    <h4>Quick Links</h4>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="menu.html">Menu</a></li>
+      <li><a href="reviews">Reviews</a></li>
+      <li><a href="Contact_us.html">Contact Us</a></li>
+    </ul>
+  </div>
+  <div class="footer-section">
+    <h4>Contact Us</h4>
+    <p>123 Restaurant Street, City</p>
+    <p>Email: info@restaurant.com</p>
+    <p>Phone: +123 456 789</p>
+  </div>
+  <div class="footer-section">
+    <h4>Follow Us</h4>
+    <div class="social-media">
+      <a href="#">Facebook</a>
+      <a href="#">Twitter</a>
+      <a href="#">Instagram</a>
     </div>
   </div>
-</footer>
 
+  <!-- Copyright Line -->
+  <div class="footer-copyright">
+    <p>&copy; 2024 Your Restaurant Name. All Rights Reserved.</p>
+  </div>
+</footer>
 <script src="script.js"></script>
 </body>
 </html>
