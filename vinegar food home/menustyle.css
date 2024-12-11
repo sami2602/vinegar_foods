@@ -1,0 +1,423 @@
+    /* Basic Reset */
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    /* Body Styles */
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #f8f8f8;
+        color: #333;
+    }
+
+    /* Location Modal Styles */
+    .location-modal {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: rgba(0, 0, 0, 0.8);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 2000;
+    }
+
+    .location-modal-content {
+        background-color: white;
+        padding: 30px;
+        width: 400px;
+        text-align: center;
+        border-radius: 8px;
+    }
+
+    .location-modal select,
+    .location-modal input {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 20px;
+        font-size: 16px;
+        border-radius: 5px;
+        border: 1px solid #ddd;
+    }
+
+    .location-modal button {
+        padding: 10px 20px;
+        background-color: #f39c12;
+        border: none;
+        color: white;
+        font-size: 16px;
+        cursor: pointer;
+        border-radius: 5px;
+    }
+
+    /* Navbar Styles */
+    .navbar {
+        background-color: #333;
+        padding: 10px 0;
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 1000;
+        transition: top 0.3s;
+    }
+    .logo{
+        padding: 5px;
+        padding-left: 15px;
+        padding-top: 15px;
+    }
+
+    .navbar ul {
+        display: flex;
+        justify-content: center;
+        list-style: none;
+    }
+
+    .navbar li {
+        margin: 0 20px;
+        text-align: center;
+        padding-top: 15px;
+    }
+
+    .navbar a {
+        color: white;
+        text-decoration: none;
+        font-size: 18px;
+        padding: 8px;
+        transition: color 0.3s;
+    }
+
+    .navbar a:hover {
+        color: #f39c12;
+    }
+
+    .cart-link a {
+        font-weight: bold;
+        color: white;
+    }
+
+    /* Category Section */
+    .category-section {
+        padding: 50px 20px;
+        background-color: #fff;
+        margin-bottom: 30px;
+    }
+
+    .category-section h2 {
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    /* Food Cards */
+    .food-card {
+        display: inline-block;
+        width: 200px;
+        margin: 15px;
+        background-color: #fff;
+        border-radius: 8px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        text-align: center;
+    }
+
+    .food-card img {
+        display:none ;
+        width: 100%;
+        height: auto;
+        border-top-left-radius: 8px;
+        border-top-right-radius: 8px;
+    }
+
+    .food-details {
+        padding: 15px;
+    }
+
+    .food-details h3 {
+        margin-bottom: 10px;
+        font-size: 18px;
+    }
+
+    .food-details p {
+        margin-bottom: 15px;
+    }
+
+    .food-card button {
+        background-color: #f39c12;
+        color: white;
+        padding: 10px;
+        border: none;
+        width: 100%;
+        cursor: pointer;
+        border-radius: 4px;
+        font-size: 16px;
+    }
+
+    .food-card button:hover {
+        background-color: #e67e22;
+    }
+
+    /* Cart Modal Styles */
+    .cart-modal {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: rgba(0, 0, 0, 0.7);
+        justify-content: center;
+        align-items: center;
+        z-index: 1001;
+    }
+
+    .cart-content {
+        background-color: white;
+        padding: 30px;
+        width: 400px;
+        text-align: center;
+        border-radius: 8px;
+    }
+
+    .cart-content h2 {
+        margin-bottom: 20px;
+    }
+
+    #cart-items {
+        list-style: none;
+        margin-bottom: 20px;
+        padding: 0;
+    }
+
+    .cart-item {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 10px;
+    }
+
+    .cart-item span {
+        display: inline-block;
+        width: 50%;
+        text-align: left;
+    }
+
+    .cart-item .item-price {
+        width: 30%;
+    }
+
+    .cart-item .item-quantity {
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .cart-item button {
+        background-color: #f39c12;
+        color: white;
+        border: none;
+        padding: 5px;
+        font-size: 14px;
+        border-radius: 4px;
+        cursor: pointer;
+        margin: 0 5px;
+    }
+
+    .promo-code {
+        margin-top: 20px;
+    }
+
+    .promo-code input {
+        padding: 10px;
+        width: 70%;
+        margin-right: 10px;
+        font-size: 16px;
+        border-radius: 4px;
+        border: 1px solid #ddd;
+    }
+
+    .promo-code button {
+        background-color: #f39c12;
+        border: none;
+        padding: 10px 20px;
+        color: white;
+        font-size: 16px;
+        border-radius: 4px;
+    }
+
+    .promo-message {
+        color: red;
+        font-size: 14px;
+        margin-top: 10px;
+    }
+
+    /* Total Price */
+    .total {
+        font-size: 18px;
+        margin-top: 20px;
+    }
+
+    #order-message {
+        margin-top: 20px;
+        font-size: 20px;
+        color: green;
+        font-weight: bold;
+        padding: 10px;
+    }
+
+    /* Responsive Design */
+    @media screen and (max-width: 768px) {
+        /* Navbar */
+        .navbar ul {
+            flex-direction: column;
+        }
+
+        .navbar li {
+            margin: 10px 0;
+        }
+
+        /* Food Cards */
+        .food-card {
+            width: 100%;
+            margin: 15px 0;
+        }
+
+        /* Cart Modal */
+        .cart-content {
+            width: 90%;
+            padding: 20px;
+        }
+
+        .cart-item {
+            flex-direction: column;
+            text-align: center;
+        }
+
+        .cart-item span {
+            width: 100%;
+            text-align: center;
+        }
+
+        .promo-code input {
+            width: 80%;
+        }
+    }
+
+    @media screen and (max-width: 480px) {
+        /* Navbar */
+        .navbar a {
+            font-size: 16px;
+        }
+
+        /* Category Section */
+        .category-section {
+            padding: 30px 10px;
+        }
+
+        /* Food Cards */
+        .food-card {
+            width: 100%;
+            margin: 10px 0;
+        }
+
+        .food-details h3 {
+            font-size: 16px;
+        }
+
+        .food-details p {
+            font-size: 14px;
+        }
+
+        /* Cart Modal */
+        .cart-content {
+            width: 90%;
+            padding: 15px;
+        }
+
+        .promo-code input {
+            width: 70%;
+        }
+
+        /* Total Price */
+        .total {
+            font-size: 16px;
+        }
+    }
+
+    /* Hide the navbar by default on small screens */
+    @media (max-width: 768px) {
+        .navbar ul {
+            display: none;
+            flex-direction: column;
+        }
+
+        .navbar ul.active {
+            display: flex;
+        }
+
+        .hamburger {
+            display: block;
+        }
+
+        .navbar li {
+            text-align: center;
+            margin: 10px 0;
+        }
+
+        .navbar a {
+            font-size: 16px;
+        }
+    }
+
+    /* Adjust the cart modal width for mobile */
+    @media (max-width: 768px) {
+        .cart-content {
+            width: 90%;
+            margin: 20px;
+        }
+    }
+    /* General adjustments for mobile screens */
+    @media (max-width: 768px) {
+        body {
+            padding: 10px;
+        }
+
+        .category-section {
+            padding: 20px;
+        }
+    }
+
+
+    /* Show hamburger on mobile screens */
+    @media (max-width: 768px) {
+        .hamburger {
+            display: block;  /* Ensure the hamburger is visible */
+        }
+
+        .navbar-links {
+            display: none;
+            position: absolute;
+            top: 60px; /* Adjust this based on your navbar height */
+            left: 0;
+            right: 0;
+            width: 100%;
+            background-color: #333;
+            text-align: center;
+            padding: 10px 0;
+            flex-direction: column;
+        }
+
+        .navbar-links.active {
+            display: flex;  /* Show the navbar links when active */
+        }
+
+        .navbar-links li {
+            margin: 10px 0;
+        }
+
+        .navbar-links a {
+            font-size: 20px;
+        }
+    }
