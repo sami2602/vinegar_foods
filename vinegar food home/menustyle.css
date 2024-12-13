@@ -1,435 +1,350 @@
-    /* Basic Reset */
-    * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-    }
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
-    /* Body Styles */
-    body {
-        font-family: Arial, sans-serif;
-        background-color: #f8f8f8;
-        color: #333;
-    }
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+}
 
-    /* Location Modal Styles */
-    .location-modal {
-        position: fixed;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        background-color: rgba(0, 0, 0, 0.8);
-        display: flex;
-        justify-content: center;
+/* Header */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #222;
+    color: white;
+    padding: 20px 50px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Navigation */
+nav ul {
+    display: flex;
+    list-style: none;
+    justify-content: center;
+    flex-grow: 1;
+}
+
+nav ul li {
+    margin-left: 40px;
+}
+
+nav ul li a {
+    color: white;
+    font-size: 18px;
+    font-weight: 550;
+    text-transform: uppercase;
+    text-decoration: none;
+    letter-spacing: 1px;
+}
+
+nav ul li a:hover {
+    color: #ffb300;
+    border-bottom: 2px solid #ffb300;
+    transition: all 0.3s ease;
+}
+
+.cart a {
+    color: white;
+    font-size: 18px;
+    font-weight: 500;
+    text-decoration: none;
+}
+
+.cart a:hover {
+    color: #ffb300;
+}
+
+/* Menu Section */
+.menu-section {
+    padding: 120px 20px 20px;
+    text-align: center;
+}
+
+.menu-section h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 36px;
+    font-weight: 700;
+    color: #222;
+    margin-bottom: 40px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.menu-items {
+    display: inline-grid;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+.menu-item {
+    width: 280px;
+    background-color: white;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    padding: 20px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.menu-item:hover {
+    transform: translateY(-10px);
+}
+
+.menu-item img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+.menu-item h3 {
+    font-size: 22px;
+    font-weight: 600;
+    color: #222;
+    margin: 10px 0;
+}
+
+.menu-item p {
+    font-size: 16px;
+    color: #777;
+    margin: 10px 0;
+}
+
+.menu-item button {
+    background-color: #ffb300;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.menu-item button:hover {
+    background-color: #e68900;
+}
+
+/* Cart Modal */
+.cart-modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.6);
+    justify-content: center;
+    align-items: center;
+}
+
+.cart-modal-content {
+    background-color: white;
+    padding: 40px;
+    width: 400px;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+    position: relative;
+}
+
+/* Close Button */
+.close {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 28px;
+    font-weight: bold;
+    color: #222;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.close:hover {
+    color: #ffb300;
+}
+
+.cart-modal-content h2 {
+    font-size: 24px;
+    font-weight: 700;
+    color: #222;
+    margin-bottom: 30px;
+}
+
+#cart-items-list {
+    list-style: none;
+    margin-bottom: 20px;
+    padding: 0;
+}
+
+#cart-items-list li {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+#cart-items-list img {
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+#cart-total {
+    font-size: 22px;
+    font-weight: 600;
+    color: #222;
+    margin-bottom: 20px;
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-size: 16px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+button {
+    background-color: #ffb300;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+button:hover {
+    background-color: #e68900;
+}
+
+/* Buttons Container */
+.buttons-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+    margin-top: auto;
+}
+
+/* Close Button */
+.close-button {
+    background-color: #ffb300;
+    color: white;
+    font-size: 16px;
+    font-weight: 500;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+}
+
+.close-button:hover {
+    background-color: #e68900;
+    transform: scale(1.05);
+}
+
+/* Checkout Button */
+#checkout-button {
+    background-color: #007bff;
+    color: white;
+    font-size: 16px;
+    font-weight: 500;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+}
+
+#checkout-button:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
         align-items: center;
-        z-index: 2000;
+        padding: 20px;
     }
 
-    .location-modal-content {
-        background-color: white;
-        padding: 30px;
-        width: 400px;
-        text-align: center;
-        border-radius: 8px;
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
     }
 
-    .location-modal select,
-    .location-modal input {
+    .menu-items {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .menu-item {
+        width: 90%;
+        margin: 10px 0;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    nav ul {
+        display: none;
         width: 100%;
-        padding: 10px;
-        margin-bottom: 20px;
-        font-size: 16px;
-        border-radius: 5px;
-        border: 1px solid #ddd;
-    }
-
-    .location-modal button {
-        padding: 10px 20px;
-        background-color: #f39c12;
-        border: none;
-        color: white;
-        font-size: 16px;
-        cursor: pointer;
-        border-radius: 5px;
-    }
-
-    /* Navbar Styles */
-    .navbar {
+        flex-direction: column;
         background-color: #333;
-        padding: 10px 0;
-        position: fixed;
-        top: 0;
+        position: absolute;
+        top: 60px;
         left: 0;
-        right: 0;
-        z-index: 1000;
-        transition: top 0.3s;
-    }
-    .logo{
-        padding: 5px;
-        padding-left: 15px;
-        padding-top: 15px;
-    }
-    .logo img{
-        height: 100px;
-        padding-left: 40px;
-        
+        padding: 20px;
     }
 
-    .navbar ul {
+    nav ul li {
+        margin: 10px 0;
+    }
+
+    nav ul.active {
         display: flex;
-        justify-content: center;
-        list-style: none;
+        margin-top: 30px;
     }
 
-    .navbar li {
-        margin: 0 20px;
-        text-align: center;
-        padding-top: 15px;
-    }
-
-    .navbar a {
-        color: white;
-        text-decoration: none;
-        font-size: 18px;
-        padding: 8px;
-        transition: color 0.3s;
-    }
-
-    .navbar a:hover {
-        color: #f39c12;
-    }
-
-    .cart-link a {
-        font-weight: bold;
-        color: white;
-    }
-
-    /* Category Section */
-    .category-section {
-        padding: 50px 20px;
-        background-color: #fff;
-        margin-bottom: 30px;
-    }
-
-    .category-section h2 {
-        text-align: center;
-        margin-bottom: 20px;
-    }
-
-    /* Food Cards */
-    .food-card {
-        display: inline-block;
-        width: 200px;
-        margin: 15px;
-        background-color: #fff;
-        border-radius: 8px;
-        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-        text-align: center;
-    }
-
-    .food-card img {
-       
-        width: 100%;
-        height: auto;
-        border-top-left-radius: 8px;
-        border-top-right-radius: 8px;
-    }
-
-    .food-details {
-        padding: 15px;
-    }
-
-    .food-details h3 {
-        margin-bottom: 10px;
-        font-size: 18px;
-    }
-
-    .food-details p {
-        margin-bottom: 15px;
-    }
-
-    .food-card button {
-        background-color: #f39c12;
-        color: white;
-        padding: 10px;
-        border: none;
-        width: 100%;
-        cursor: pointer;
-        border-radius: 4px;
-        font-size: 16px;
-    }
-
-    .food-card button:hover {
-        background-color: #e67e22;
-    }
-
-    /* Cart Modal Styles */
-    .cart-modal {
-        display: none;
-        position: fixed;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        background-color: rgba(0, 0, 0, 0.7);
-        justify-content: center;
-        align-items: center;
-        z-index: 1001;
-    }
-
-    .cart-content {
-        background-color: white;
-        padding: 30px;
-        width: 400px;
-        text-align: center;
-        border-radius: 8px;
-    }
-
-    .cart-content h2 {
-        margin-bottom: 20px;
-    }
-
-    #cart-items {
-        list-style: none;
-        margin-bottom: 20px;
-        padding: 0;
-    }
-
-    .cart-item {
+    .hamburger-menu {
         display: flex;
-        justify-content: space-between;
-        align-items: center;
-        margin-bottom: 10px;
     }
 
-    .cart-item span {
-        display: inline-block;
-        width: 50%;
-        text-align: left;
-    }
-
-    .cart-item .item-price {
-        width: 30%;
-    }
-
-    .cart-item .item-quantity {
-        display: inline-flex;
-        justify-content: center;
-        align-items: center;
-    }
-
-    .cart-item button {
-        background-color: #f39c12;
-        color: white;
-        border: none;
-        padding: 5px;
-        font-size: 14px;
-        border-radius: 4px;
-        cursor: pointer;
-        margin: 0 5px;
-    }
-
-    .promo-code {
-        margin-top: 20px;
-    }
-
-    .promo-code input {
-        padding: 10px;
-        width: 70%;
-        margin-right: 10px;
+    .cart a {
         font-size: 16px;
-        border-radius: 4px;
-        border: 1px solid #ddd;
+    }
+}
+
+@media (max-width: 480px) {
+    .cart-modal-content {
+        width: 90%;
+        min-height: 350px;
     }
 
-    .promo-code button {
-        background-color: #f39c12;
-        border: none;
-        padding: 10px 20px;
-        color: white;
-        font-size: 16px;
-        border-radius: 4px;
-    }
-
-    .promo-message {
-        color: red;
-        font-size: 14px;
-        margin-top: 10px;
-    }
-
-    /* Total Price */
-    .total {
+    #cart-total {
         font-size: 18px;
-        margin-top: 20px;
     }
-
-    #order-message {
-        margin-top: 20px;
-        font-size: 20px;
-        color: green;
-        font-weight: bold;
-        padding: 10px;
-    }
-
-    /* Responsive Design */
-    @media screen and (max-width: 768px) {
-        /* Navbar */
-        .navbar ul {
-            flex-direction: column;
-        }
-
-        .navbar li {
-            margin: 10px 0;
-        }
-
-        /* Food Cards */
-        .food-card {
-            width: 100%;
-            margin: 15px 0;
-        }
-
-        /* Cart Modal */
-        .cart-content {
-            width: 90%;
-            padding: 20px;
-        }
-
-        .cart-item {
-            flex-direction: column;
-            text-align: center;
-        }
-
-        .cart-item span {
-            width: 100%;
-            text-align: center;
-        }
-
-        .promo-code input {
-            width: 80%;
-        }
-    }
-
-    @media screen and (max-width: 480px) {
-        /* Navbar */
-        .navbar a {
-            font-size: 16px;
-        }
-
-        /* Category Section */
-        .category-section {
-            padding: 30px 10px;
-        }
-
-        /* Food Cards */
-        .food-card {
-            width: 100%;
-            margin: 10px 0;
-        }
-
-        .food-details h3 {
-            font-size: 16px;
-        }
-
-        .food-details p {
-            font-size: 14px;
-        }
-
-        /* Cart Modal */
-        .cart-content {
-            width: 90%;
-            padding: 15px;
-        }
-
-        .promo-code input {
-            width: 70%;
-        }
-
-        /* Total Price */
-        .total {
-            font-size: 16px;
-        }
-    }
-
-    /* Hide the navbar by default on small screens */
-    @media (max-width: 768px) {
-        .navbar ul {
-            display: none;
-            flex-direction: column;
-        }
-
-        .navbar ul.active {
-            display: flex;
-        }
-
-        .hamburger {
-            display: block;
-        }
-
-        .navbar li {
-            text-align: center;
-            margin: 10px 0;
-        }
-
-        .navbar a {
-            font-size: 16px;
-        }
-    }
-
-    /* Adjust the cart modal width for mobile */
-    @media (max-width: 768px) {
-        .cart-content {
-            width: 90%;
-            margin: 20px;
-        }
-    }
-    /* General adjustments for mobile screens */
-    @media (max-width: 768px) {
-        body {
-            padding: 10px;
-        }
-
-        .category-section {
-            padding: 20px;
-        }
-    }
-
-
-    /* Show hamburger on mobile screens */
-    @media (max-width: 768px) {
-        .hamburger {
-            display: block;  /* Ensure the hamburger is visible */
-        }
-
-        .navbar-links {
-            display: none;
-            position: absolute;
-            top: 60px; /* Adjust this based on your navbar height */
-            left: 0;
-            right: 0;
-            width: 100%;
-            background-color: #333;
-            text-align: center;
-            padding: 10px 0;
-            flex-direction: column;
-        }
-
-        .navbar-links.active {
-            display: flex;  /* Show the navbar links when active */
-        }
-
-        .navbar-links li {
-            margin: 10px 0;
-        }
-
-        .navbar-links a {
-            font-size: 20px;
-        }
-    }
-    .navbar-links {
-        display: none;
-    }
-    .navbar-links.active {
-        display: block;
-    }
-    
+}

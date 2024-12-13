@@ -3,275 +3,173 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Food Menu</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Restaurant Menu</title>
     <link rel="stylesheet" href="menustyle.css">
-
 </head>
 <body>
 
-    <!-- Location Selection Modal -->
-    <div id="location-modal" class="location-modal">
-        <div class="location-modal-content">
-            <h2>Choose Your Location</h2>
-            <select id="location-select">
-                <option value="">Select your location</option>
-                <option value="Karachi">Karachi</option>
-                <option value="Islamabad">Islamabad</option>
-                <option value="Lahore">Lahore</option>
-                <option value="Peshawar">Peshawar</option>
-            </select>
-            <input type="text" id="custom-location" placeholder="Or enter your location" />
-            <button id="set-location">Set Location</button>
+    <!-- Header with Logo and Cart -->
+    <header>
+        <div class="logo">
+            <img src="images2/logo.png" height="120px" alt="Restaurant Logo"> <!-- Replace with actual logo -->
         </div>
-    </div>
+        <nav>
+            <ul>
+                <li><a href="#starters">Starters</a></li>
+                <li><a href="#main-courses">Main Courses</a></li>
+                <li><a href="#desserts">Desserts</a></li>
+                <li><a href="#beverages">Beverages</a></li>
+            </ul>
+        </nav>
+        <div class="cart">
+            <a href="#" id="cart-link">Cart (0)</a>
+        </div>
+    
+        <!-- Hamburger Menu -->
+        <div class="hamburger-menu">
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+        </div>
+    </header>
+    
+
+    <!-- Menu Sections -->
+    <section id="starters" class="menu-section">
+        <h2>Starters</h2>
+        <div class="menu-items">
+            <div class="menu-item">
+                <img src="starter1.jpg" alt="Starter 1">
+                <h3>Starter 1</h3>
+                <p>$10.00</p>
+                <button class="add-to-cart" data-category="starters" data-id="1" data-name="Starter 1" data-price="10.00">Add to Cart</button>
+            </div>
+            <div class="menu-item">
+                <img src="starter2.jpg" alt="Starter 2">
+                <h3>Starter 2</h3>
+                <p>$12.00</p>
+                <button class="add-to-cart" data-category="starters" data-id="2" data-name="Starter 2" data-price="12.00">Add to Cart</button>
+            </div>
+        </div>
+        <div class="menu-items">
+            <div class="menu-item">
+                <img src="starter1.jpg" alt="Starter 1">
+                <h3>Starter 1</h3>
+                <p>$10.00</p>
+                <button class="add-to-cart" data-category="starters" data-id="1" data-name="Starter 1" data-price="10.00">Add to Cart</button>
+            </div>
+            <div class="menu-item">
+                <img src="starter2.jpg" alt="Starter 2">
+                <h3>Starter 2</h3>
+                <p>$12.00</p>
+                <button class="add-to-cart" data-category="starters" data-id="2" data-name="Starter 2" data-price="12.00">Add to Cart</button>
+            </div>
+        </div>
+        <div class="menu-items">
+            <div class="menu-item">
+                <img src="starter1.jpg" alt="Starter 1">
+                <h3>Starter 1</h3>
+                <p>$10.00</p>
+                <button class="add-to-cart" data-category="starters" data-id="1" data-name="Starter 1" data-price="10.00">Add to Cart</button>
+            </div>
+            <div class="menu-item">
+                <img src="starter2.jpg" alt="Starter 2">
+                <h3>Starter 2</h3>
+                <p>$12.00</p>
+                <button class="add-to-cart" data-category="starters" data-id="2" data-name="Starter 2" data-price="12.00">Add to Cart</button>
+            </div>
+        </div>
+        <div class="menu-items">
+            <div class="menu-item">
+                <img src="starter1.jpg" alt="Starter 1">
+                <h3>Starter 1</h3>
+                <p>$10.00</p>
+                <button class="add-to-cart" data-category="starters" data-id="1" data-name="Starter 1" data-price="10.00">Add to Cart</button>
+            </div>
+            <div class="menu-item">
+                <img src="starter2.jpg" alt="Starter 2">
+                <h3>Starter 2</h3>
+                <p>$12.00</p>
+                <button class="add-to-cart" data-category="starters" data-id="2" data-name="Starter 2" data-price="12.00">Add to Cart</button>
+            </div>
+        </div>
+    </section>
+
+    <section id="main-courses" class="menu-section">
+        <h2>Main Courses</h2>
+        <div class="menu-items">
+            <div class="menu-item">
+                <img src="main1.jpg" alt="Main Course 1">
+                <h3>Main Course 1</h3>
+                <p>$15.00</p>
+                <button class="add-to-cart" data-category="main-courses" data-id="3" data-name="Main Course 1" data-price="15.00">Add to Cart</button>
+            </div>
+            <div class="menu-item">
+                <img src="main2.jpg" alt="Main Course 2">
+                <h3>Main Course 2</h3>
+                <p>$18.00</p>
+                <button class="add-to-cart" data-category="main-courses" data-id="4" data-name="Main Course 2" data-price="18.00">Add to Cart</button>
+            </div>
+        </div>
+    </section>
+
+    <section id="desserts" class="menu-section">
+        <h2>Desserts</h2>
+        <div class="menu-items">
+            <div class="menu-item">
+                <img src="dessert1.jpg" alt="Dessert 1">
+                <h3>Dessert 1</h3>
+                <p>$8.00</p>
+                <button class="add-to-cart" data-category="desserts" data-id="5" data-name="Dessert 1" data-price="8.00">Add to Cart</button>
+            </div>
+            <div class="menu-item">
+                <img src="dessert2.jpg" alt="Dessert 2">
+                <h3>Dessert 2</h3>
+                <p>$9.00</p>
+                <button class="add-to-cart" data-category="desserts" data-id="6" data-name="Dessert 2" data-price="9.00">Add to Cart</button>
+            </div>
+        </div>
+    </section>
+
+    <section id="beverages" class="menu-section">
+        <h2>Beverages</h2>
+        <div class="menu-items">
+            <div class="menu-item">
+                <img src="beverage1.jpg" alt="Beverage 1">
+                <h3>Beverage 1</h3>
+                <p>$5.00</p>
+                <button class="add-to-cart" data-category="beverages" data-id="7" data-name="Beverage 1" data-price="5.00">Add to Cart</button>
+            </div>
+            <div class="menu-item">
+                <img src="beverage2.jpg" alt="Beverage 2">
+                <h3>Beverage 2</h3>
+                <p>$6.00</p>
+                <button class="add-to-cart" data-category="beverages" data-id="8" data-name="Beverage 2" data-price="6.00">Add to Cart</button>
+            </div>
+        </div>
+    </section>
 
     
-    <!-- Navbar -->
-    <div class="navbar">
-        <div class="logo"><img src="images2/logo.png" height="100px" alt=""></div>
-        <div class="hamburger" id="hamburger-menu">
-            <span></span>
-            <span></span>
-            <span></span>
-        </div>
-        <ul class="navbar-links">
-            <li><a href="#starter" class="category-link">Starter</a></li>
-            <li><a href="#main-course" class="category-link">Main Course</a></li>
-            <li><a href="#dessert" class="category-link">Dessert</a></li>
-            <li><a href="#beverages" class="category-link">Beverages</a></li>
-            <li class="cart-link"><a href="#cart"><i class="fa fa-shopping-cart" style="font-size:35px;color:rgb(231, 228, 228)"></i></a></li>
-        </ul>
-    </div>
+<!-- Cart Modal -->
 
-    <!-- Categories (menu sections) -->
-    <div id="starter" class="category-section">
-        <h2>Starter</h2>
-        <div class="food-items">
-            <!-- Starter Dish Cards -->
-            <div class="food-card">
-                <img src="images2/honeyMustard.jpeg"  alt="dish1">
-                <div class="food-details">
-                    <h3>Honey Mustard Wings</h3>
-                    <p>Crispy Fried wings tossed in sweet tangy honey mustard glaze</p>
-                    <p>$5.99</p>
-                    <button class="add-to-cart" data-category="starter" data-id="1">Add to Cart</button>
-                </div>
-            </div>
-            <div class="food-card">
-                <img src="images2/1677312302-Supreme%20Nachos.jpeg" alt="Dish 2">
-                <div class="food-details">
-                    <h3>Supreme Nachos</h3>
-                    <p>Delightful Mexican starter with Imported tortilla chips topped with cheese and flavorful chicken chunks. Served with salsa and sour cream.</p>
-                    <p>$5.99</p>
-                    <button class="add-to-cart" data-category="starter2" data-id="2">Add to Cart</button>
-                </div>
-            </div>
-            <div class="food-card">
-                <img src="starter1.jpg" alt="Dish 1">
-                <div class="food-details">
-                    <h3>Dish 1</h3>
-                    <p>Description of dish 1.</p>
-                    <p>$5.99</p>
-                    <button class="add-to-cart" data-category="starter" data-id="1">Add to Cart</button>
-                </div>
-            </div>
-            <div class="food-card">
-                <img src="starter1.jpg" alt="Dish 1">
-                <div class="food-details">
-                    <h3>Dish 1</h3>
-                    <p>Description of dish 1.</p>
-                    <p>$5.99</p>
-                    <button class="add-to-cart" data-category="starter" data-id="1">Add to Cart</button>
-                </div>
-            </div>
-            <div class="food-card">
-                <img src="starter1.jpg" alt="Dish 1">
-                <div class="food-details">
-                    <h3>Dish 1</h3>
-                    <p>Description of dish 1.</p>
-                    <p>$5.99</p>
-                    <button class="add-to-cart" data-category="starter" data-id="1">Add to Cart</button>
-                </div>
-            </div>
-            <div class="food-card">
-                <img src="starter1.jpg" alt="Dish 1">
-                <div class="food-details">
-                    <h3>Dish 1</h3>
-                    <p>Description of dish 1.</p>
-                    <p>$5.99</p>
-                    <button class="add-to-cart" data-category="starter" data-id="1">Add to Cart</button>
-                </div>
-            </div>
-            <div class="food-card">
-                <img src="starter1.jpg" alt="Dish 1">
-                <div class="food-details">
-                    <h3>Dish 1</h3>
-                    <p>Description of dish 1.</p>
-                    <p>$5.99</p>
-                    <button class="add-to-cart" data-category="starter" data-id="1">Add to Cart</button>
-                </div>
-            </div>
-            <div class="food-card">
-                <img src="starter1.jpg" alt="Dish 1">
-                <div class="food-details">
-                    <h3>Dish 1</h3>
-                    <p>Description of dish 1.</p>
-                    <p>$5.99</p>
-                    <button class="add-to-cart" data-category="starter" data-id="1">Add to Cart</button>
-                </div>
-            </div>
-            <div class="food-card">
-                <img src="starter1.jpg" alt="Dish 1">
-                <div class="food-details">
-                    <h3>Dish 1</h3>
-                    <p>Description of dish 1.</p>
-                    <p>$5.99</p>
-                    <button class="add-to-cart" data-category="starter" data-id="1">Add to Cart</button>
-                </div>
-            </div>
-            <div class="food-card">
-                <img src="starter1.jpg" alt="Dish 1">
-                <div class="food-details">
-                    <h3>Dish 1</h3>
-                    <p>Description of dish 1.</p>
-                    <p>$5.99</p>
-                    <button class="add-to-cart" data-category="starter" data-id="1">Add to Cart</button>
-                </div>
-            </div>
-            <div class="food-card">
-                <img src="starter1.jpg" alt="Dish 1">
-                <div class="food-details">
-                    <h3>Dish 1</h3>
-                    <p>Description of dish 1.</p>
-                    <p>$5.99</p>
-                    <button class="add-to-cart" data-category="starter" data-id="1">Add to Cart</button>
-                </div>
-            </div>
-            <div class="food-card">
-                <img src="starter1.jpg" alt="Dish 1">
-                <div class="food-details">
-                    <h3>Dish 1</h3>
-                    <p>Description of dish 1.</p>
-                    <p>$5.99</p>
-                    <button class="add-to-cart" data-category="starter" data-id="1">Add to Cart</button>
-                </div>
-            </div>
-            <div class="food-card">
-                <img src="starter1.jpg" alt="Dish 1">
-                <div class="food-details">
-                    <h3>Dish 1</h3>
-                    <p>Description of dish 1.</p>
-                    <p>$5.99</p>
-                    <button class="add-to-cart" data-category="starter" data-id="1">Add to Cart</button>
-                </div>
-            </div>
-            <div class="food-card">
-                <img src="starter1.jpg" alt="Dish 1">
-                <div class="food-details">
-                    <h3>Dish 1</h3>
-                    <p>Description of dish 1.</p>
-                    <p>$5.99</p>
-                    <button class="add-to-cart" data-category="starter" data-id="1">Add to Cart</button>
-                </div>
-            </div>
-            <div class="food-card">
-                <img src="starter1.jpg" alt="Dish 1">
-                <div class="food-details">
-                    <h3>Dish 1</h3>
-                    <p>Description of dish 1.</p>
-                    <p>$5.99</p>
-                    <button class="add-to-cart" data-category="starter" data-id="1">Add to Cart</button>
-                </div>
-            </div>
+<div id="cart-modal" class="cart-modal">
+    <div class="cart-modal-content">
+        <h2>Your Cart</h2>
+        <ul id="cart-items-list"></ul>
+        <p>Total: $<span id="cart-total">0.00</span></p>
+        <input type="text" id="promo-code" placeholder="Enter promo code">
+        <button id="apply-promo-code">Apply Promo Code</button>
+        <p id="promo-message"></p>
 
-            <div class="food-card">
-                <img src="starter1.jpg" alt="Dish 1">
-                <div class="food-details">
-                    <h3>Dish 1</h3>
-                    <p>Description of dish 1.</p>
-                    <p>$5.99</p>
-                    <button class="add-to-cart" data-category="starter" data-id="1">Add to Cart</button>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div id="main-course" class="category-section">
-        <h2>Main Course</h2>
-        <div class="food-items">
-            <!-- Main Course Dish Cards -->
-            <div class="food-card">
-                <img src="main1.jpg" alt="Dish 1">
-                <div class="food-details">
-                    <h3>Dish 1</h3>
-                    <p>Description of main course dish 1.</p>
-                    <p>$12.99</p>
-                    <button class="add-to-cart" data-category="main-course" data-id="2">Add to Cart</button>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div id="dessert" class="category-section">
-        <h2>Dessert</h2>
-        <div class="food-items">
-            <!-- Dessert Dish Cards -->
-            <div class="food-card">
-                <img src="dessert1.jpg" alt="Dish 1">
-                <div class="food-details">
-                    <h3>Dish 1</h3>
-                    <p>Description of dessert dish 1.</p>
-                    <p>$4.99</p>
-                    <button class="add-to-cart" data-category="dessert" data-id="3">Add to Cart</button>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div id="beverages" class="category-section">
-        <h2>Beverages</h2>
-        <div class="food-items">
-            <!-- Beverages Dish Cards -->
-            <div class="food-card">
-                <img src="images/daniyal (2).png" alt="Dish 1">
-                <div class="food-details">
-                    <h3>Dish 1</h3>
-                    <p>Description of beverage dish 1.</p>
-                    <p>$2.99</p>
-                    <button class="add-to-cart" data-category="beverages" data-id="4">Add to Cart</button>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- Cart Modal -->
-    <div id="cart" class="cart-modal">
-        <div class="cart-content">
-            <h2>Your Cart</h2>
-            <ul id="cart-items">
-                <!-- Cart items will appear here -->
-            </ul>
-
-            <!-- Promo Code Section -->
-            <div class="promo-code">
-                <input type="text" id="promo-code" placeholder="Enter Promo Code" />
-                <button id="apply-promo-code">Apply</button>
-                <p id="promo-message"></p>
-            </div>
-
-            <div class="total">
-                <p>Total: $<span id="cart-total">0.00</span></p>
-            </div>
+        <!-- Buttons Container for Close and Checkout -->
+        <div class="buttons-container">
+            <button id="close-cart" class="close-button">x</button>
             <button id="checkout-button">Checkout</button>
-            <button id="close-cart-button">Close</button>
         </div>
     </div>
+</div>
 
-    <!-- Order Message (hidden initially) -->
-     
-<!-- Order Message (this will show after order is placed) -->
-<div id="order-message" style="display: none; text-align: center; font-size: 18px; color: green;"></div>
+
 
 
     <script src="menuscript.js"></script>

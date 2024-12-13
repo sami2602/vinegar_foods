@@ -32,7 +32,7 @@ window.addEventListener("scroll", function () {
 
     // Reset inactivity timer when scrolling
     clearTimeout(inactivityTimeout);
-    inactivityTimeout = setTimeout(hideNavbar, 5000); // Hide navbar after 5 seconds of inactivity
+    inactivityTimeout = setTimeout(hideNavbar, 1000); // Hide navbar after 5 seconds of inactivity
 });
 
 // Detect mouse movement to show navbar and reset inactivity timer
