@@ -1,6 +1,6 @@
 /* Global Styles */
 body {
-  background-color: #cd861b; /* Default white background for the body */
+  background-color: #caa40a35; /* Default white background for the body */
   font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
@@ -259,6 +259,9 @@ footer .footer-copyright p {
 
 /* Responsive Styles */
 @media (max-width: 768px) {
+  .mavbad{
+    justify-content: space-around;
+  }
   .navbar-nav {
     padding: 5px;
     flex-direction: column;

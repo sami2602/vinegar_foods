@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <title>Restaurant Menu</title>
     <link rel="stylesheet" href="menustyle.css">
 </head>
@@ -22,7 +23,7 @@
             </ul>
         </nav>
         <div class="cart">
-            <a href="#" id="cart-link">Cart (0)</a>
+            <a href="#" id="cart-link"><i class="fa fa-shopping-cart" style="font-size:36px"></i></a>
         </div>
     
         <!-- Hamburger Menu -->
@@ -39,57 +40,57 @@
         <h2>Starters</h2>
         <div class="menu-items">
             <div class="menu-item">
-                <img src="starter1.jpg" alt="Starter 1">
-                <h3>Starter 1</h3>
-                <p>$10.00</p>
+                <img src="images2/Supreme_Nachos.jpeg" alt="Starter 1">
+                <h3>Supreme Nachos</h3>
+                <p>Rs 10.00</p>
                 <button class="add-to-cart" data-category="starters" data-id="1" data-name="Starter 1" data-price="10.00">Add to Cart</button>
             </div>
             <div class="menu-item">
-                <img src="starter2.jpg" alt="Starter 2">
-                <h3>Starter 2</h3>
-                <p>$12.00</p>
+                <img src="images2/honeyMustard.jpeg" alt="Starter 2">
+                <h3>Honey Mustard</h3>
+                <p>Rs 12.00</p>
                 <button class="add-to-cart" data-category="starters" data-id="2" data-name="Starter 2" data-price="12.00">Add to Cart</button>
             </div>
         </div>
         <div class="menu-items">
             <div class="menu-item">
-                <img src="starter1.jpg" alt="Starter 1">
-                <h3>Starter 1</h3>
-                <p>$10.00</p>
-                <button class="add-to-cart" data-category="starters" data-id="1" data-name="Starter 1" data-price="10.00">Add to Cart</button>
+                <img src="images2/French_Fries.jpeg" alt="Starter 3">
+                <h3>French Fries</h3>
+                <p>Rs 10.00</p>
+                <button class="add-to-cart" data-category="starters" data-id="3" data-name="Starter 3" data-price="5.00">Add to Cart</button>
             </div>
             <div class="menu-item">
-                <img src="starter2.jpg" alt="Starter 2">
-                <h3>Starter 2</h3>
-                <p>$12.00</p>
-                <button class="add-to-cart" data-category="starters" data-id="2" data-name="Starter 2" data-price="12.00">Add to Cart</button>
-            </div>
-        </div>
-        <div class="menu-items">
-            <div class="menu-item">
-                <img src="starter1.jpg" alt="Starter 1">
-                <h3>Starter 1</h3>
-                <p>$10.00</p>
-                <button class="add-to-cart" data-category="starters" data-id="1" data-name="Starter 1" data-price="10.00">Add to Cart</button>
-            </div>
-            <div class="menu-item">
-                <img src="starter2.jpg" alt="Starter 2">
-                <h3>Starter 2</h3>
-                <p>$12.00</p>
-                <button class="add-to-cart" data-category="starters" data-id="2" data-name="Starter 2" data-price="12.00">Add to Cart</button>
+                <img src="images2/Spicy Mexican Wings.jpeg" alt="Starter 2">
+                <h3>Spicy Mexican Wings</h3>
+                <p>Rs 12.00</p>
+                <button class="add-to-cart" data-category="starters" data-id="4" data-name="Starter 4" data-price="9.00">Add to Cart</button>
             </div>
         </div>
         <div class="menu-items">
             <div class="menu-item">
-                <img src="starter1.jpg" alt="Starter 1">
-                <h3>Starter 1</h3>
-                <p>$10.00</p>
-                <button class="add-to-cart" data-category="starters" data-id="1" data-name="Starter 1" data-price="10.00">Add to Cart</button>
+                <img src="images2/Dynamite_prawns.jpeg" alt="Starter 1">
+                <h3>Dynamite Prawns</h3>
+                <p>Rs 10.00</p>
+                <button class="add-to-cart" data-category="starters" data-id="5" data-name="Starter 5" data-price="11.00">Add to Cart</button>
+            </div>
+            <div class="menu-item">
+                <img src="images2/Fish&Chips.jpeg" alt="Starter 2">
+                <h3>Fish & Chips</h3>
+                <p>Rs 12.00</p>
+                <button class="add-to-cart" data-category="starters" data-id="6" data-name="Starter 6" data-price="12.00">Add to Cart</button>
+            </div>
+        </div>
+        <div class="menu-items">
+            <div class="menu-item">
+                <img src="images2/Cheesy_Fries.jpeg" alt="Starter 1">
+                <h3>Cheesy Fries</h3>
+                <p>Rs 10.00</p>
+                <button class="add-to-cart" data-category="starters" data-id="7" data-name="Starter 7" data-price="9.00">Add to Cart</button>
             </div>
             <div class="menu-item">
                 <img src="starter2.jpg" alt="Starter 2">
                 <h3>Starter 2</h3>
-                <p>$12.00</p>
+                <p>Rs 12.00</p>
                 <button class="add-to-cart" data-category="starters" data-id="2" data-name="Starter 2" data-price="12.00">Add to Cart</button>
             </div>
         </div>
@@ -156,14 +157,14 @@
     <div class="cart-modal-content">
         <h2>Your Cart</h2>
         <ul id="cart-items-list"></ul>
-        <p>Total: $<span id="cart-total">0.00</span></p>
+        <p>Total: Rs <span id="cart-total">0.00</span></p>
         <input type="text" id="promo-code" placeholder="Enter promo code">
         <button id="apply-promo-code">Apply Promo Code</button>
         <p id="promo-message"></p>
 
         <!-- Buttons Container for Close and Checkout -->
         <div class="buttons-container">
-            <button id="close-cart" class="close-button">x</button>
+            <button id="close-cart" class="close-button">close</button>
             <button id="checkout-button">Checkout</button>
         </div>
     </div>
