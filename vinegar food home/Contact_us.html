@@ -6,6 +6,37 @@
   <title>Contact Us - Vinegar Foods</title>
   <link rel="stylesheet" href="style.css">
 </head>
+<style>
+h5{
+  text-align: center;
+  text-overflow: clip;
+  font-size: xx-large;
+ }
+ p{
+  text-align: center;
+  text-overflow: clip;
+  font-size:larger;
+ }
+ @media (max-width: 768px) {
+    .carousel-item img {
+        height: 900px;
+    }
+}
+form{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: nowrap;
+    align-content: space-between;
+    flex-direction: column;
+}
+#follow{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+</style>
 <body>
 
 <!-- Navbar -->
@@ -13,15 +44,15 @@
   <nav class="navbar navbar-expand-lg navbar-dark fixed-top ps-5">
     <div class="container-fluid">
       <a class="logo" href="#">
-        <img src="images2/logo.png" height="100px" alt="Logo">
+        <img src="images2/logo.png" height="120px" alt="Logo">
       </a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse pe-5" id="navbarNav">
-        <ul class="navbar-nav mx-auto"> <!-- Use mx-auto for centering navbar items -->
+        <ul class="navbar-nav mx-auto"> 
           <li><a href="index.html">Home</a></li>
-          <li><a href="about.html">About Us</a></li>
+          <li><a href="About.html">About Us</a></li>
           <li><a href="menu.html">Menu</a></li>
           <li><a href="menu.html">Order Online</a></li>
           <li><a href="Contact_us.html">Contact</a></li>
@@ -31,24 +62,41 @@
   </nav>
 </header>
 
+<div class="carousel-inner">
+  <div class="carousel-item active">
+    <img src="images2/1698133860-11.jpeg" class="d-block w-100" alt="...">
+    <div class="carousel-caption d-none d-md-block">
+      <h5>CONTACT US</h5>
+      <p>We'd Love to Hear from You!</p>
+    </div>
+  </div>
 
 
 <!-- Contact Us Section -->
 <section id="contact-us">
   <h2>Get in Touch</h2>
   <form action="submit_form.php" method="post">
-    <input type="text" name="name" placeholder="Your Name" required><br>
-    <input type="email" name="email" placeholder="Your Email" required><br>
-    <textarea name="message" placeholder="Your Message" required></textarea><br>
+    <label for="name">Your Name</label>
+    <input type="text" name="name" id="name" placeholder="Your Name" required><br>
+
+    <label for="email">Your Email</label>
+    <input type="email" name="email" id="email" placeholder="Your Email" required><br>
+
+    <label for="message">Your Message</label>
+    <textarea name="message" id="message" placeholder="Your Message" required></textarea><br>
+
     <button type="submit">Send Message</button>
   </form>
+  
   <div class="contact-details">
     <p><strong>Email:</strong> contact@vinegarfoods.com</p>
     <p><strong>Phone:</strong> (123) 456-7890</p>
   </div>
+  
   <div class="social-links">
     <p>Follow us on:</p>
-    <a href="#">Facebook</a> | <a href="#">Instagram</a>
+    <a id="follow" href="https://www.facebook.com/yourpage">Facebook</a> | 
+    <a id="follow" href="https://www.instagram.com/yourprofile">Instagram</a>
   </div>
 </section>
 
@@ -56,7 +104,7 @@
 <footer>
   <div class="footer-section">
     <h4>About Us</h4>
-    <p>We are a restaurant that offers the best food in town. Our goal is to provide you with an exceptional dining experience! <a href="">Read More</a></p>
+    <p>We are a restaurant that offers the best food in town. Our goal is to provide you with an exceptional dining experience! <a href="About.html"><u><b>Read More</b></u></a></p>
   </div>
   <div class="footer-section">
     <h4>Quick Links</h4>
@@ -76,9 +124,9 @@
   <div class="footer-section">
     <h4>Follow Us</h4>
     <div class="social-media">
-      <a href="#">Facebook</a>
-      <a href="#">Twitter</a>
-      <a href="#">Instagram</a>
+      <a href="https://www.facebook.com/yourpage">Facebook</a>
+      <a href="https://www.twitter.com/yourprofile">Twitter</a>
+      <a href="https://www.instagram.com/yourprofile">Instagram</a>
     </div>
   </div>
 

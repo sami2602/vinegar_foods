@@ -40,10 +40,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
         cartItemsList.innerHTML = cart.map(item => `
             <li>
-                <img src="${item.name.toLowerCase()}.jpg" alt="${item.name}">
+               
                 <h4>${item.name}</h4>
-                <p>Quantity: <button class="decrease-quantity" data-id="${item.id}">-</button> ${item.quantity} <button class="increase-quantity" data-id="${item.id}">+</button></p>
-                <p>Price: $${(item.price * item.quantity).toFixed(2)}</p>
+                <p><button class="decrease-quantity" data-id="${item.id}">-</button> ${item.quantity} <button class="increase-quantity" data-id="${item.id}">+</button></p>
+                <p>Price: Rs${(item.price * item.quantity).toFixed(2)}</p>
             </li>
         `).join('');
 
@@ -97,10 +97,16 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     // Open cart modal
-    cartLink.addEventListener('click', (e) => {
-        e.preventDefault();
-        cartModal.style.display = 'flex';
-    });
+cartLink.addEventListener('click', (e) => {
+    e.preventDefault();
+    cartModal.style.display = 'flex';
+
+    // Ensure that modal height and scroll behavior are adjusted on open
+    cartModal.style.maxHeight = '100vh';  // You can adjust this if necessary
+    cartModal.style.overflowY = 'auto';  // Enable scrolling when needed
+});
+
+
 
     // Close cart modal
     closeCartButton.addEventListener('click', () => {
@@ -111,13 +117,4 @@ document.addEventListener('DOMContentLoaded', () => {
     document.querySelector('.hamburger-menu').addEventListener('click', () => {
         document.querySelector('nav ul').classList.toggle('active');
     });
-});
-// Open cart modal
-cartLink.addEventListener('click', (e) => {
-    e.preventDefault();
-    cartModal.style.display = 'flex';
-
-    // Ensure that modal height and scroll behavior are adjusted on open
-    cartModal.style.maxHeight = '80vh';  // You can adjust this if necessary
-    cartModal.style.overflowY = 'auto';  // Enable scrolling when needed
 });

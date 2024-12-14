@@ -43,7 +43,7 @@ document.addEventListener("mousemove", function (event) {
 
     // Reset inactivity timer whenever the mouse is moved
     clearTimeout(inactivityTimeout);
-    inactivityTimeout = setTimeout(hideNavbar, 3000); // Hide navbar after 3 seconds of inactivity
+    inactivityTimeout = setTimeout(hideNavbar, 20000); // Hide navbar after 3 seconds of inactivity
 });
 
 

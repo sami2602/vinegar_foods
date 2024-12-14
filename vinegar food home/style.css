@@ -11,8 +11,8 @@ h2, h3, h4 {
 }
 
 a {
-  text-decoration: none;
-  color: white;
+  text-decoration: underline;
+  color: rgb(192, 31, 31);
 }
 
 .container {
@@ -199,8 +199,8 @@ footer .footer-section {
 
 footer h4 {
   margin-bottom: 15px;
-  padding-right: 150px;
-  font-size: 20px;
+  padding-right: 240px;
+  font-size: 25px;
   color: #ff6f00; /* Accent color for headings */
 }
 
@@ -232,6 +232,7 @@ footer ul li a:hover {
 footer .social-media {
   display: flex;
   gap: 20px;
+  flex-direction: column
 }
 
 footer .social-media a {
