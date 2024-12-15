@@ -106,8 +106,8 @@ a {
   bottom: 20px;
   left: 50%;
   transform: translateX(-50%);
-  color: white;
-  text-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
+  color: #ffffff;
+  text-shadow: 0 0 10px rgba(203, 195, 195, 0.942);
 }
 
 
@@ -198,10 +198,11 @@ footer .footer-section {
 }
 
 footer h4 {
+  text-align: center;
   margin-bottom: 15px;
-  padding-right: 240px;
+
   font-size: 25px;
-  color: #ff6f00; /* Accent color for headings */
+  color: #ff6f00;
 }
 
 footer p, footer ul {
@@ -222,6 +223,7 @@ footer ul li a {
   font-size: 14px;
   display: block;
   margin: 5px 0;
+  text-align: center;
 }
 
 footer ul li a:hover {
@@ -236,9 +238,10 @@ footer .social-media {
 }
 
 footer .social-media a {
-  color: white;
-  text-decoration: none;
-  font-size: 16px;
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    text-align: center;
 }
 
 footer .social-media a:hover {
@@ -307,7 +310,7 @@ footer .footer-copyright p {
 
   footer .social-media a {
     font-size: 14px;
-    padding-left: 27px;
+    
   }
 }
 /* Review Section Styles */
