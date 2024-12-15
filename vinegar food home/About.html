@@ -13,27 +13,27 @@
     
 </head>
 <body>
-    <header id="navbar">
-        <nav class="navbar navbar-expand-lg navbar-dark fixed-top ps-5">
-          <div class="container-fluid">
-            <a class="logo" href="#">
-              <img src="images2/logo.png" height="120px" alt="Logo">
-            </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-              <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse pe-5" id="navbarNav">
-              <ul class="navbar-nav mx-auto"> 
-                <li><a href="index.html">Home</a></li>
-                <li><a href="About.html">About Us</a></li>
-                <li><a href="menu.html">Menu</a></li>
-                <li><a href="menu.html">Order Online</a></li>
-                <li><a href="Contact_us.html">Contact</a></li>
-              </ul>
-            </div>
-          </div>
-        </nav>
-      </header>
+  <header id="navbar">
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top ps-5">
+      <div class="container-fluid">
+        <a class="logo" href="#">
+          <img src="images2/logo.png" height="120px" alt="Logo">
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse pe-5" id="navbarNav">
+          <ul class="navbar-nav mx-auto"> 
+            <li><a href="index.html">Home</a></li>
+            <li><a href="About.html">About Us</a></li>
+            <li><a href="images2/Vinegar Food Restaurant.pdf">Menu</a></li>
+            <li><a href="menu.html">Order Online</a></li>
+            <li><a href="Contact_us.html">Contact</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
 
     <div class="container">
 
@@ -46,7 +46,7 @@
                 <div class="welcome-text">
                     <h1>Welcome To Our Restaurant</h1>
                     <p>Enjoy delicious meals made with the freshest ingredients, served with care in a welcoming atmosphere. Experience quality food and exceptional service.</p>
-                    <a href="#" class="btn btn-custom">Read More</a>
+                    <a href="#more" class="btn btn-custom">Read More</a>
                 </div>
             </div>
         </div>
@@ -63,7 +63,7 @@
                         <li class="mb-2 check-icon">Handmade with love and attention</li>
                         <li class="mb-2 check-icon">A commitment to quality and taste</li>
                     </ul>
-                    <a href="#" class="btn btn-neon">Discover More</a>
+                    <a href="#more" class="btn btn-neon">Discover More</a>
                 </div>
                 <!-- Images Section -->
                 <div class="col-lg-6">
@@ -86,7 +86,7 @@
         </div>
 
         <!-- Cards Section -->
-        <div class="row mt-5">
+        <div id="more" class="row mt-5">
             <div class="col-md-4">
                 <div class="card">
                     <img src="images/image (2).png" alt="Quality Food">
@@ -113,39 +113,40 @@
     </div>
 
     <footer>
-        <div class="footer-section">
-          <h4>About Us</h4>
-          <p>We are a restaurant that offers the best food in town. Our goal is to provide you with an exceptional dining experience! <a href="About.html"><u><b>Read More</b></u></a></p>
+      <div class="footer-section">
+        <h4>About Us</h4>
+        <p>We are a restaurant that offers the best food in town. Our goal is to provide you with an exceptional dining experience! <a href="About.html"><u>Read More</u></a></p>
+      </div>
+      <div class="footer-section">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="images2/Vinegar Food Restaurant.pdf">Menu</a></li>
+          <li><a href="#reviews">Reviews</a></li>
+          <li><a href="Contact_us.html">Contact Us</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h4>Contact Us</h4>
+        <p>123 Restaurant Street, City</p>
+        <p>Email: info@restaurant.com</p>
+        <p>Phone: +123 456 789</p>
+      </div>
+      <div class="footer-section">
+        <h4>Follow Us</h4>
+        <div class="social-media">
+          <a href="https://www.facebook.com/yourpage">Facebook</a>
+          <a href="https://www.twitter.com/yourprofile">Twitter</a>
+          <a href="https://www.instagram.com/yourprofile">Instagram</a>
         </div>
-        <div class="footer-section">
-          <h4>Quick Links</h4>
-          <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="menu.html">Menu</a></li>
-            <li><a href="reviews">Reviews</a></li>
-            <li><a href="Contact_us.html">Contact Us</a></li>
-          </ul>
-        </div>
-        <div class="footer-section">
-          <h4>Contact Us</h4>
-          <p>123 Restaurant Street, City</p>
-          <p>Email: info@restaurant.com</p>
-          <p>Phone: +123 456 789</p>
-        </div>
-        <div class="footer-section">
-          <h4>Follow Us</h4>
-          <div class="social-media">
-            <a href="https://www.facebook.com/yourpage">Facebook</a>
-            <a href="https://www.twitter.com/yourprofile">Twitter</a>
-            <a href="https://www.instagram.com/yourprofile">Instagram</a>
-          </div>
-        </div>
-      
-        <!-- Copyright Line -->
-        <div class="footer-copyright">
-          <p>&copy; 2024 Your Restaurant Name. All Rights Reserved.</p>
-        </div>
-      </footer>
+      </div>
+    
+      <!-- Copyright Line -->
+      <div class="footer-copyright">
+        <p>&copy; 2024 Your Restaurant Name. All Rights Reserved.</p>
+      </div>
+    </footer>
+    
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
 

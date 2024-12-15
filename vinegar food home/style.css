@@ -59,7 +59,8 @@ a {
   background-color: #ff6f00;
   transition: width 0.3s ease;
 }
-.navbar:hover{
+
+.navbar:hover {
   background-color: #010101;
 }
 
@@ -75,7 +76,7 @@ a {
 
 /* Navbar Links on Scroll */
 #navbar.scrolled {
-  background-color: black; /* Change navbar to black on scroll */
+  background-color: #30353a; /* Change navbar to black on scroll */
 }
 
 /* Carousel Styles */
@@ -110,7 +111,6 @@ a {
   text-shadow: 0 0 10px rgba(203, 195, 195, 0.942);
 }
 
-
 /* Review Section Styles */
 #reviews {
   background-color: #f8f9fa;
@@ -129,21 +129,14 @@ a {
   background-color: black;
   color: white;
   padding: 20px;
-  width: 30%;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .review:hover {
-  transform: translateY(-10px); /* Slight lift effect */
+  transform: translateY(-15px); /* Slight lift effect */
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.8);
-}
-
-.stars {
-  color: gold;
-  font-size: 1.2em;
-  align-content: center;
 }
 
 .review h3 {
@@ -161,17 +154,14 @@ a {
 
 .reviews {
   display: flex;
-  transition: transform 1s ease-in-out;
-}
-
-.review {
-  width: 33.33%; /* Show three reviews at a time */
+  flex-wrap: nowrap;
+  transition: transform 3s ease-in-out;
   padding: 20px;
   background-color: #010101;
-  border: 1px solid #ddd;
+  border: 2px solid #ddd;
   margin: 0 10px;
   border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 8px rgba(4, 4, 4, 0.1);
 }
 
 .stars {
@@ -179,10 +169,9 @@ a {
   font-size: 1.5em;
 }
 
-
 /* Footer Styles */
 footer {
-  background-color: #343a40; /* Dark background color */
+  background-color: #010101; /* Dark background color */
   color: white;
   padding: 40px 20px;
   display: flex;
@@ -200,13 +189,13 @@ footer .footer-section {
 footer h4 {
   text-align: center;
   margin-bottom: 15px;
-
   font-size: 25px;
   color: #ff6f00;
 }
 
 footer p, footer ul {
   font-size: 14px;
+  text-align: center;
 }
 
 footer ul {
@@ -234,14 +223,14 @@ footer ul li a:hover {
 footer .social-media {
   display: flex;
   gap: 20px;
-  flex-direction: column
+  flex-direction: column;
 }
 
 footer .social-media a {
-    color: white;
-    text-decoration: none;
-    font-size: 16px;
-    text-align: center;
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+  text-align: center;
 }
 
 footer .social-media a:hover {
@@ -263,9 +252,6 @@ footer .footer-copyright p {
 
 /* Responsive Styles */
 @media (max-width: 768px) {
-  .mavbad{
-    justify-content: space-around;
-  }
   .navbar-nav {
     padding: 5px;
     flex-direction: column;
@@ -291,7 +277,7 @@ footer .footer-copyright p {
 @media (max-width: 480px) {
   .navbar-nav a {
     font-size: 16px;
-    background-color: black;
+    background-color: #30353a;
   }
 
   .review {
@@ -301,7 +287,6 @@ footer .footer-copyright p {
   footer h4 {
     font-size: 18px;
     margin-bottom: 15px;
-    padding-right: 10px;
   }
 
   footer p, footer ul li a {
@@ -310,175 +295,17 @@ footer .footer-copyright p {
 
   footer .social-media a {
     font-size: 14px;
-    
   }
 }
-/* Review Section Styles */
 
-
-#reviews-container {
-  position: relative;
-  width: 100%;
-  height: 300px; /* Height based on preference */
-  overflow: hidden;
-}
-
-.reviews {
-  display: flex;
-  transition: transform 1s ease-in-out;
-}
-
-.review {
-  width: 100%; /* Will be 100% on mobile, 33.33% on desktop */
-  padding: 20px;
-  background-color: #010101;
-  border: 1px solid #ddd;
-  margin: 0 10px;
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  color: white;
-}
-
-.stars {
-  color: #ffcc00;
-  font-size: 1.5em;
-}
-
-/* Desktop view (3 reviews at a time) */
+/* Reviews Layout Based on Screen Size */
 @media (min-width: 768px) {
-  .reviews {
-    transition: transform 3s ease-in-out;
-  }
-
-  .review {
-    width: 33.33%; /* Three reviews at a time in horizontal row */
-   
-  }
-}
-
-/* Mobile view (1 review at a time) */
-@media (max-width: 768px) {
-  .reviews {
-    transition: transform 1s ease-in-out;
-  }
-
-  .review {
-    width: 100%; /* Only one review at a time */
-  }
-}
-
-/* General Styles */
-body {
-  font-family: Arial, sans-serif;
-  margin: 0;
-  padding: 0;
-}
-
-/* Review Container Styles */
-#reviews-container {
-  position: relative;
-  width: 100%;
-  height: 300px; /* Adjust based on your design */
-  overflow: hidden;
-}
-
-.reviews {
-  display: flex;
-  transition: transform 1s ease-in-out;
-}
-
-/* Individual Review Styles */
-.review {
-  width: 100%; /* Default to one review at a time */
-  padding: 20px;
-  background-color: #010101;
-  color: white;
-  margin: 0 10px;
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-.stars {
-  color: #ffcc00;
-  font-size: 1.5em;
-}
-
-/* For Desktop (Three reviews at once) */
-@media (min-width: 768px) {
-  .reviews {
-    transition: transform 3s ease-in-out;
-  }
-
   .review {
     width: 33.33%; /* Three reviews at a time */
   }
 }
 
-/* For Mobile (One review at a time) */
 @media (max-width: 768px) {
-  .reviews {
-    transition: transform 1s ease-in-out;
-  }
-
-  .review {
-    width: 100%; /* One review at a time */
-  }
-}
-
-
-/* General Styles */
-body {
-  font-family: Arial, sans-serif;
-  margin: 0;
-  padding: 0;
-}
-
-/* Review Container Styles */
-#reviews-container {
-  position: relative;
-  width: 100%;
-  height: 300px; /* Adjust height based on your preference */
-  overflow: hidden;
-}
-
-.reviews {
-  display: flex;
-  flex-wrap: nowrap;
-  transition: transform 1s ease-in-out;
-}
-
-.review {
-  width: 100%; /* Default to one review at a time */
-  padding: 20px;
-  background-color: #010101;
-  color: white;
-  margin: 0 10px;
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-.stars {
-  color: #ffcc00;
-  font-size: 1.5em;
-}
-
-/* For Desktop (Three reviews at once) */
-@media (min-width: 768px) {
-  .reviews {
-    transition: transform 3s ease-in-out;
-  }
-
-  .review {
-    width: 33.33%; /* Three reviews at a time */
-  }
-}
-
-/* For Mobile (One review at a time) */
-@media (max-width: 768px) {
-  .reviews {
-    transition: transform 1s ease-in-out;
-  }
-
   .review {
     width: 100%; /* One review at a time */
   }
